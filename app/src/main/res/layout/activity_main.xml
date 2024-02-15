@@ -29,5 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/gradEnd"
         app:srcCompat="@drawable/ic_action_add_24dp" />
 </FrameLayout>

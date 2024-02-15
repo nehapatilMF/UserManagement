@@ -8,4 +8,6 @@
     <string name="image_content_description">image</string>
     <string name="edit_text_hint_name">Name</string>
     <string name="edit_text_hint_mobileNumber">Mobile Number</string>
+    <string name="update_image">Update Image</string>
+    <string name="update">UPDATE</string>
 </resources>

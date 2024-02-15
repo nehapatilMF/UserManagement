@@ -26,7 +26,7 @@
     <dimen name="item_ll_marginEnd">2dp</dimen>
     <dimen name="item_title_textSize">16sp</dimen>
     <dimen name="item_description_textSize">14sp</dimen>
-    <dimen name="detail_screen_image_height_size">250dp</dimen>
+    <dimen name="detail_screen_image_height_size">300dp</dimen>
     <dimen name="detail_screen_description_margin">8dp</dimen>
     <dimen name="detail_screen_description_text_size">16sp</dimen>
 </resources>

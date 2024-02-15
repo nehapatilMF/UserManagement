@@ -46,11 +46,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getListFromLocalDB() {
+
         val rvList = binding?.rvList
         val tvNoRecordsAvailable =binding?.tvNoRecordsAvailable
 
         val dbHandler = DatabaseHandler(this)
-
+        dbHandler.addDummyDataIfEmpty()
         val getList = dbHandler.getStudentsList()
 
         if (getList.size > 0) {

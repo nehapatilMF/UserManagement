@@ -10,7 +10,7 @@
         android:id="@+id/toolbarDetails"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
+        android:background="@color/gradEnd"
         android:theme="@style/CustomToolbarStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/ll1"/>
+                app:layout_constraintBottom_toTopOf="@+id/ll1"
+                app:layout_constraintHeight_percent="0.5"/>
             <LinearLayout
                 android:id="@+id/ll1"
                 android:layout_width="match_parent"
@@ -82,6 +83,8 @@
                     android:id="@+id/ll2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"

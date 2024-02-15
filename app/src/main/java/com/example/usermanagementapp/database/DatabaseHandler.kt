@@ -33,7 +33,36 @@ class DatabaseHandler(context: Context) :
                 + KEY_LOCATION + " TEXT)")
         db?.execSQL(createTable)
     }
+    fun addDummyDataIfEmpty() {
+        if (isDatabaseEmpty()) {
+            val dummyDataList = listOf(
+                Model(0, "Aarav Patel", "image_path_1", "9876543210", "15/02/1995", "Mumbai"),
+                Model(0, "Aisha Sharma", "image_path_2", "8765432109", "20/05/1992", "Delhi"),
+                Model(0, "Arjun Gupta", "image_path_3", "7654321098", "08/11/1998", "Jaipur"),
+                Model(0, "Diya Verma", "image_path_4", "6543210987", "03/09/1990", "Bangalore"),
+                Model(0, "Kabir Singh", "image_path_5", "5432109876", "12/07/1994", "Chennai"),
+                Model(0, "Neha Kapoor", "image_path_6", "8321098765", "25/04/1997", "Hyderabad"),
+                Model(0, "Rahul Sharma", "image_path_7", "9210987654", "09/03/1993", "Kolkata"),
+                Model(0, "Sanya Malik", "image_path_8", "8109876543", "18/06/1991", "Ahmedabad"),
+                Model(0, "Vijay Yadav", "image_path_9", "7098765432", "30/12/1996", "Pune"),
+                Model(0, "Zara Khan", "image_path_10", "8123456789", "07/08/1999", "Lucknow")
+            )
 
+
+            for (model in dummyDataList) {
+                addStudent(model)
+            }
+        }
+    }
+
+    private fun isDatabaseEmpty(): Boolean {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $TABLE_STUDENT", null)
+        val isEmpty = cursor.count == 0
+        cursor.close()
+        db.close()
+        return isEmpty
+    }
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_STUDENT")
         onCreate(db)

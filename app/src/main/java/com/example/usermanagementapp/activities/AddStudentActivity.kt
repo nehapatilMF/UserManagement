@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -39,7 +40,7 @@ class AddStudentActivity : AppCompatActivity(), View.OnClickListener {
 
         if (intent.hasExtra(MainActivity.EXTRA_DETAILS)) {
             details =
-                    intent.getSerializableExtra(MainActivity.EXTRA_DETAILS) as Model
+                intent.getSerializableExtra(MainActivity.EXTRA_DETAILS) as Model
         }
 
         if (details != null) {
@@ -53,7 +54,8 @@ class AddStudentActivity : AppCompatActivity(), View.OnClickListener {
                 .load(saveImageToInternalStorage)
                 .into(binding?.imageView!!)
 
-            binding?.btnSave?.text = "UPDATE"
+            binding?.btnSave?.text = getString(R.string.update)
+            binding?.tvAddImage?.text = getString(R.string.update_image)
         }
 
 
@@ -81,9 +83,10 @@ class AddStudentActivity : AppCompatActivity(), View.OnClickListener {
                     binding?.etName?.text.isNullOrEmpty() -> {
                         Toast.makeText(this, "Please enter title", Toast.LENGTH_SHORT).show()
                     }
-                    binding?.etMobileNumber?.text.isNullOrEmpty() -> {
-                        Toast.makeText(this, "Please enter description", Toast.LENGTH_SHORT)
-                            .show()
+
+                    binding?.etMobileNumber?.text.isNullOrEmpty() || !isValidMobileNumber(binding?.etMobileNumber?.text.toString()) -> {
+                        Toast.makeText(this, "Please enter a valid mobile number", Toast.LENGTH_SHORT).show()
+
                     }
                     binding?.etLocation?.text.isNullOrEmpty() -> {
                         Toast.makeText(this, "Please select location", Toast.LENGTH_SHORT)
@@ -126,6 +129,9 @@ class AddStudentActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun isValidMobileNumber(mobileNumber: String): Boolean {
+        return Patterns.PHONE.matcher(mobileNumber).matches()
+    }
     private fun saveImageToInternalStorage(bitmap: Bitmap) {
         saveImageToInternalStorage = ImageUtils.saveImageToInternalStorage(bitmap, this)
         Log.e("Saved Image : ", "Path :: $saveImageToInternalStorage")
