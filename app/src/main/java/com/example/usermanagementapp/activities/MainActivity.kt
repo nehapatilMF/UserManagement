@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val tvNoRecordsAvailable =binding?.tvNoRecordsAvailable
 
         val dbHandler = DatabaseHandler(this)
-
+        dbHandler.addDummyDataIfEmpty()
         val getList = dbHandler.getStudentsList()
 
         if (getList.size > 0) {

@@ -32,23 +32,25 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/image_height_detail_activity"
+                android:layout_width="799dp"
+                android:layout_height="454dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/detail_screen_image_placeholder"
+                app:layout_constraintBottom_toTopOf="@+id/ll1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/ll1"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <LinearLayout
                 android:id="@+id/ll1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="704dp"
+                android:layout_height="504dp"
                 android:layout_margin="@dimen/main_ll_margin"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView">
+
                 <LinearLayout
                     android:id="@+id/ll"
                     android:layout_width="match_parent"
@@ -60,23 +62,26 @@
                         android:layout_height="wrap_content"
                         android:text="@string/edit_text_hint_name"
                         android:textColor="@color/headings"
-                        android:textSize="@dimen/text_size_detail_act" />
+                        android:textSize="@dimen/text_size_detail_act_tab" />
+
                     <TextView
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/tv_margin_top_details_act"
                         android:drawablePadding="@dimen/tv_drawable_padding"
-                        android:textSize="@dimen/tv_result_detail_act"
                         android:fontFamily="sans-serif-light"
                         android:textColor="#000000"
+                        android:textSize="@dimen/tv_result_detail_act_tab"
                         app:drawableLeftCompat="@drawable/person" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_detail_act"
                         android:layout_marginTop="@dimen/view_margin_detail_act"
                         android:background="@color/grey" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/ll2"
                     android:layout_width="match_parent"
@@ -84,6 +89,7 @@
                     android:layout_marginTop="@dimen/layout_margin_top"
 
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -97,22 +103,25 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/tv_margin_top_details_act"
                         android:drawablePadding="@dimen/tv_drawable_padding"
-                        android:textSize="@dimen/tv_result_detail_act"
-
                         android:fontFamily="sans-serif-light"
+
                         android:textColor="#000000"
+                        android:textSize="@dimen/tv_result_detail_act"
                         app:drawableLeftCompat="@drawable/baseline_add_call_24" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_detail_act"
                         android:layout_marginTop="@dimen/view_margin_detail_act"
                         android:background="@color/grey" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/layout_margin_top"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -126,10 +135,11 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/tv_margin_top_details_act"
                         android:drawablePadding="@dimen/tv_drawable_padding"
-                        android:textSize="@dimen/tv_result_detail_act"
                         android:fontFamily="sans-serif-light"
                         android:textColor="#000000"
+                        android:textSize="@dimen/tv_result_detail_act"
                         app:drawableLeftCompat="@drawable/date" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_detail_act"
@@ -137,12 +147,14 @@
                         android:background="@color/grey" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/layout_margin_top"
 
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,10 +168,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/tv_margin_top_details_act"
                         android:drawablePadding="@dimen/tv_drawable_padding"
-                        android:textSize="@dimen/tv_result_detail_act"
                         android:fontFamily="sans-serif-light"
                         android:textColor="#000000"
+                        android:textSize="@dimen/tv_result_detail_act"
                         app:drawableLeftCompat="@drawable/location" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_detail_act"

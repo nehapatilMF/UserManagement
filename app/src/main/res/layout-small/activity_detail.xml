@@ -33,7 +33,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/image_height_detail_activity"
+                android:layout_height="@dimen/image_height_detail_activity_small"
                 android:scaleType="centerCrop"
                 android:src="@drawable/detail_screen_image_placeholder"
                 app:layout_constraintEnd_toEndOf="parent"

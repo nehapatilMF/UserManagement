@@ -19,16 +19,16 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="@string/note_kindly_add_one"
-        android:textSize="@dimen/no_records_available_text_size"
+        android:textSize="@dimen/no_records_available_text_size_tab"
         android:visibility="visible"
         tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddHappyPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/gradEnd"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:backgroundTint="@color/gradEnd"
         app:srcCompat="@drawable/ic_action_add_24dp" />
 </FrameLayout>

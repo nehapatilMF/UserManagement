@@ -13,10 +13,10 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        val toolbar_detail = binding?.toolbarDetails
-        val iv_place_image = binding?.imageView
-        val tv_mobile_number = binding?.phone
-        val tv_location = binding?.address
+        val toolbarDetail = binding?.toolbarDetails
+        val ivPlaceImage = binding?.imageView
+        val tvMobileNumber = binding?.phone
+        val tvLocation = binding?.address
         val name = binding?.name
         val dob = binding?.dob
         var detailModel: Model? = null
@@ -28,18 +28,18 @@ class DetailActivity : AppCompatActivity() {
 
         if (detailModel != null) {
 
-            setSupportActionBar(toolbar_detail)
+            setSupportActionBar(toolbarDetail)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             supportActionBar?.title = null
 
-            toolbar_detail?.setNavigationOnClickListener {
+            toolbarDetail?.setNavigationOnClickListener {
                 onBackPressed()
             }
-            iv_place_image?.setImageURI(Uri.parse(detailModel.image))
-            tv_mobile_number?.setText( detailModel.mobileNumber)
-            tv_location?.setText(detailModel.location)
-            name?.setText(detailModel.name)
-            dob?.setText( detailModel.date)
+            ivPlaceImage?.setImageURI(Uri.parse(detailModel.image))
+            tvMobileNumber?.text = detailModel.mobileNumber
+            tvLocation?.text = detailModel.location
+            name?.text = detailModel.name
+            dob?.text = detailModel.date
         }
 
     }

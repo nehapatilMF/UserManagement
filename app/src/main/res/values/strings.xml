@@ -8,4 +8,7 @@
     <string name="image_content_description">image</string>
     <string name="edit_text_hint_name">Name</string>
     <string name="edit_text_hint_mobileNumber">Mobile Number</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
 </resources>

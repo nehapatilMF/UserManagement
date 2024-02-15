@@ -29,4 +29,19 @@
     <dimen name="detail_screen_image_height_size">250dp</dimen>
     <dimen name="detail_screen_description_margin">8dp</dimen>
     <dimen name="detail_screen_description_text_size">16sp</dimen>
+    <dimen name="text_size_detail_act">18sp</dimen>
+    <dimen name="tv_margin_top_details_act">5dp</dimen>
+    <dimen name="tv_drawable_padding">10dp</dimen>
+    <dimen name="tv_result_detail_act">23sp</dimen>
+    <dimen name="view_height_detail_act">1dp</dimen>
+    <dimen name="view_margin_detail_act">10dp</dimen>
+    <dimen name="layout_margin_top">15dp</dimen>
+    <dimen name="main_ll_margin">25dp</dimen>
+    <dimen name="image_height_detail_activity">280dp</dimen>
+    <dimen name="no_records_available_text_size_Xl">23sp</dimen>
+    <dimen name="no_records_available_text_size_l">20sp</dimen>
+    <dimen name="no_records_available_text_size_tab">30sp</dimen>
+    <dimen name="text_size_detail_act_tab">23sp</dimen>
+    <dimen name="tv_result_detail_act_tab">30</dimen>
+    <dimen name="image_height_detail_activity_small">220dp</dimen>
 </resources>
